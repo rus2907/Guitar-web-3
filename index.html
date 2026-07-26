@@ -434,10 +434,84 @@
   .copyright a:hover{ color:var(--amber-400) !important; }
 
   .visually-hidden{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
+
+  
+  
+#adminPage .admin-wrap{ max-width:980px; margin:0 auto; padding:0 24px 100px; }
+#adminPage h1, #adminPage h2, #adminPage h3{ font-family:var(--font-display); font-weight:600; color:var(--ivory-100); margin:0; }
+#adminPage a{ color:var(--amber-400); }
+#adminPage .topbar{ border-bottom:1px solid rgba(245,236,221,0.08); padding:22px 0; margin-bottom:8px; }
+#adminPage .topbar .admin-wrap{ display:flex; align-items:center; justify-content:space-between; padding-bottom:0; }
+#adminPage .brand{ display:flex; align-items:center; gap:10px; font-family:var(--font-display); font-weight:700; font-size:19px; }
+#adminPage .brand .pick{ width:18px; height:22px; background:var(--amber-500); clip-path:polygon(50% 0%, 100% 38%, 74% 100%, 26% 100%, 0% 38%); flex:none; }
+#adminPage .brand small{ font-family:var(--font-mono); font-size:11px; color:var(--ivory-500); font-weight:400; letter-spacing:0.06em; }
+#adminPage .site-link{ font-size:13.5px; text-decoration:none; border:1px solid rgba(245,236,221,0.18); padding:8px 16px; border-radius:999px; }
+
+#adminPage .eyebrow{ font-family:var(--font-mono); font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:var(--amber-400); }
+#adminPage section{ padding:44px 0; border-bottom:1px solid rgba(245,236,221,0.08); }
+#adminPage section h2{ font-size:26px; margin:10px 0 6px; }
+#adminPage section > p.desc{ color:var(--ivory-300); font-size:14.5px; max-width:640px; margin:0 0 24px; }
+
+#adminPage .card{ background:var(--walnut-800); border:1px solid rgba(245,236,221,0.08); border-radius:var(--radius-md); padding:24px; }
+
+  /* gate */
+#adminPage #gate{ min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px; }
+#adminPage #gate .card{ max-width:380px; width:100%; text-align:center; }
+#adminPage #gate input{ width:100%; text-align:center; letter-spacing:0.3em; font-family:var(--font-mono); font-size:18px; margin:18px 0; padding:12px; border-radius:8px; border:1px solid rgba(245,236,221,0.15); background:rgba(245,236,221,0.05); color:var(--ivory-100); }
+#adminPage #gate .err{ color:var(--danger); font-size:13px; min-height:18px; margin-bottom:8px; }
+#adminPage #app{ display:none; }
+
+#adminPage button, #adminPage .btn{ font-family:inherit; cursor:pointer; }
+#adminPage .btn{ display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:999px; font-weight:600; font-size:13.5px; border:1px solid transparent; text-decoration:none; }
+#adminPage .btn-primary{ background:var(--amber-500); color:var(--ink-900); border:none; }
+#adminPage .btn-primary:hover{ background:var(--amber-300); }
+#adminPage .btn-ghost{ background:transparent; color:var(--ivory-100); border-color:rgba(245,236,221,0.28); }
+#adminPage .btn-ghost:hover{ border-color:var(--amber-400); color:var(--amber-300); }
+#adminPage .btn-danger{ background:transparent; color:var(--danger); border-color:rgba(217,122,95,0.4); }
+#adminPage .btn-danger:hover{ background:rgba(217,122,95,0.1); }
+#adminPage .btn-sm{ padding:7px 13px; font-size:12.5px; }
+
+#adminPage input, #adminPage select{ background:rgba(245,236,221,0.05); border:1px solid rgba(245,236,221,0.15); color:var(--ivory-100); padding:10px 12px; border-radius:8px; font-size:14px; font-family:inherit; }
+#adminPage label{ display:block; font-size:12px; color:var(--ivory-500); margin-bottom:6px; }
+
+  /* slot times manager */
+#adminPage .time-chip-list{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom:18px; }
+#adminPage .time-chip{ display:flex; align-items:center; gap:8px; font-family:var(--font-mono); font-size:13.5px; background:rgba(245,236,221,0.05); border:1px solid rgba(245,236,221,0.15); padding:8px 8px 8px 14px; border-radius:999px; }
+#adminPage .time-chip button{ background:none; border:none; color:var(--danger); font-size:14px; line-height:1; padding:2px; }
+#adminPage .add-time-row{ display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end; }
+#adminPage .add-time-row .field{ flex:1; min-width:160px; }
+
+  /* day/slot blocker */
+#adminPage .admin-day-rail{ display:flex; gap:8px; overflow-x:auto; padding-bottom:8px; margin-bottom:20px; }
+#adminPage .admin-day-pill{ flex:none; font-family:var(--font-mono); text-align:center; background:rgba(245,236,221,0.04); border:1px solid rgba(245,236,221,0.12); color:var(--ivory-300); padding:10px 16px; border-radius:10px; cursor:pointer; min-width:66px; }
+#adminPage .admin-day-pill .admin-dname{ display:block; font-size:10.5px; letter-spacing:0.05em; text-transform:uppercase; opacity:0.8; }
+#adminPage .admin-day-pill .admin-dnum{ display:block; font-size:16px; margin-top:2px; color:var(--ivory-100); }
+#adminPage .admin-day-pill.active{ background:var(--amber-500); border-color:var(--amber-500); }
+#adminPage .admin-day-pill.active .admin-dname, #adminPage .admin-day-pill.active .admin-dnum{ color:var(--ink-900); }
+#adminPage .slot-toggle-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(150px,1fr)); gap:12px; }
+#adminPage .slot-toggle{ display:flex; align-items:center; justify-content:space-between; gap:8px; background:var(--walnut-900); border:1px dashed rgba(245,236,221,0.25); border-radius:10px; padding:12px 14px; }
+#adminPage .slot-toggle.open-state{ border-color:rgba(212,175,55,0.4); }
+#adminPage .slot-toggle.blocked-state{ border-color:rgba(217,122,95,0.5); background:rgba(217,122,95,0.06); }
+#adminPage .slot-toggle.taken-state{ opacity:0.55; }
+#adminPage .slot-toggle .time{ font-family:var(--font-mono); font-size:13.5px; }
+#adminPage .slot-toggle .status{ font-family:var(--font-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:0.04em; color:var(--ivory-500); display:block; margin-top:2px; }
+#adminPage .slot-toggle button{ background:none; border:1px solid rgba(245,236,221,0.2); color:var(--ivory-100); border-radius:999px; font-size:11px; padding:5px 10px; }
+
+  /* bookings table */
+#adminPage table{ width:100%; border-collapse:collapse; font-size:13.5px; }
+#adminPage th{ text-align:left; font-family:var(--font-mono); font-size:11px; letter-spacing:0.05em; text-transform:uppercase; color:var(--ivory-500); padding:10px 12px; border-bottom:1px solid rgba(245,236,221,0.12); }
+#adminPage td{ padding:12px; border-bottom:1px solid rgba(245,236,221,0.06); vertical-align:top; color:var(--ivory-300); }
+#adminPage td.name-cell{ color:var(--ivory-100); font-weight:500; }
+#adminPage .empty-note{ color:var(--ivory-500); font-size:14px; padding:20px 0; }
+#adminPage .note{ font-size:12.5px; color:var(--ivory-500); margin-top:6px; }
+#adminPage .warn-banner{ background:rgba(217,122,95,0.1); border:1px solid rgba(217,122,95,0.35); border-radius:var(--radius-md); padding:18px 22px; margin-bottom:12px; font-size:14px; color:var(--ivory-300); }
+#adminPage .warn-banner b{ color:var(--ivory-100); }
+
 </style>
 </head>
 <body>
 
+<div id="publicSite">
 <header class="site-nav">
   <div class="nav-inner">
     <a href="#top" class="brand"><span class="pick" aria-hidden="true"></span>RDB Chords</a>
@@ -773,9 +847,78 @@
         <a href="#contact">Contact</a>
       </div>
     </div>
-    <p class="copyright">&copy; <span id="year"></span> RDB Chords. All rights reserved. &nbsp;·&nbsp; <a href="admin.html" style="color:var(--ivory-500); text-decoration:none;">Admin</a></p>
+    <p class="copyright">&copy; <span id="year"></span> RDB Chords. All rights reserved. &nbsp;·&nbsp; <a href="#" id="adminLinkBtn" style="color:var(--ivory-500); text-decoration:none;">Admin</a></p>
   </div>
 </footer>
+</div>
+
+<div id="adminPage" style="display:none;">
+<div id="gate">
+  <div class="card">
+    <p class="eyebrow">RDB CHORDS</p>
+    <h1 style="margin:10px 0 6px; font-size:24px;">Admin access</h1>
+    <p style="color:var(--ivory-300); font-size:14px; margin:0;">Enter your PIN to manage slots and bookings.</p>
+    <input type="password" id="pinInput" placeholder="••••••••" autocomplete="off">
+    <p class="err" id="pinError"></p>
+    <button class="btn btn-primary" id="pinSubmit" style="width:100%; justify-content:center;">Enter</button>
+  </div>
+</div>
+
+<div id="app">
+  <div class="topbar">
+    <div class="admin-wrap">
+      <div class="brand"><span class="pick"></span>RDB Chords <small>ADMIN</small></div>
+      <div style="display:flex; align-items:center;">
+        <a href="#" class="site-link" id="viewSiteBtn">&#8592; View website</a>
+        <button class="site-link" id="signOutBtn" style="background:none; margin-left:10px;">Lock</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="admin-wrap">
+    <div class="warn-banner">
+      <b>Note:</b> this admin page is connected to your shared RDB Chords database. Changes you make here — timings, blocked slots, cancellations — update the live website for every visitor immediately. Access is protected by a PIN, so don't share this link publicly.
+    </div>
+
+    <section>
+      <p class="eyebrow">TIME SLOTS</p>
+      <h2>Manage lesson timings</h2>
+      <p class="desc">These are the times that show up as bookable slots on the website, every day. Remove a time to stop offering it, or add a new one.</p>
+      <div class="card">
+        <div class="time-chip-list" id="timeChipList"></div>
+        <div class="add-time-row">
+          <div class="field">
+            <label for="newTimeInput">Add a time (e.g. 6:00 PM)</label>
+            <input type="text" id="newTimeInput" placeholder="6:00 PM" style="width:100%;">
+          </div>
+          <button class="btn btn-primary btn-sm" id="addTimeBtn">Add time</button>
+          <button class="btn btn-ghost btn-sm" id="resetTimesBtn">Reset to default</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="eyebrow">AVAILABILITY</p>
+      <h2>Block or reopen a slot</h2>
+      <p class="desc">Mark a specific day's slot as closed (holiday, personal time off, fully booked elsewhere) or reopen one you'd previously closed.</p>
+      <div class="card">
+        <div class="admin-day-rail" id="adminDayRail"></div>
+        <div class="slot-toggle-grid" id="adminSlotGrid"></div>
+      </div>
+    </section>
+
+    <section style="border-bottom:none;">
+      <p class="eyebrow">BOOKINGS</p>
+      <h2>Upcoming lessons</h2>
+      <p class="desc">Everyone who has booked a slot from this browser. Cancelling a booking reopens that slot.</p>
+      <div class="card">
+        <div id="bookingsTableWrap"></div>
+      </div>
+    </section>
+  </div>
+</div>
+</div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/firebase@10.12.2/firebase-app-compat.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/firebase@10.12.2/firebase-firestore-compat.js"></script>
@@ -1076,8 +1219,247 @@
     document.getElementById('contactSuccess').classList.add('open');
   });
 
+  // ---- same-page smooth scrolling for every internal link (nav, hero, footer) ----
+  document.addEventListener('click', function(e){
+    var link = e.target.closest('a[href^="#"]');
+    if(!link) return;
+    var id = link.getAttribute('href').slice(1);
+    if(!id) return;
+    var target = document.getElementById(id);
+    if(target){
+      e.preventDefault();
+      target.scrollIntoView({ behavior:'smooth', block:'start' });
+      mobilePanel.classList.remove('open');
+      hamburger.setAttribute('aria-expanded','false');
+    }
+  });
+
+  // ---- Admin panel toggle (same page, no separate site) ----
+  var publicSite = document.getElementById('publicSite');
+  var adminPage = document.getElementById('adminPage');
+
+  document.getElementById('adminLinkBtn').addEventListener('click', function(e){
+    e.preventDefault();
+    publicSite.style.display = 'none';
+    adminPage.style.display = 'block';
+    window.scrollTo(0,0);
+  });
+
+  document.getElementById('viewSiteBtn').addEventListener('click', function(e){
+    e.preventDefault();
+    adminPage.style.display = 'none';
+    publicSite.style.display = 'block';
+    window.scrollTo(0,0);
+  });
+
   renderDays();
   renderSlots();
+})();
+</script>
+<script>
+(function(){
+  var DEFAULT_SLOT_TIMES = ["10:00 AM","11:30 AM","1:00 PM","2:30 PM","4:00 PM","5:30 PM","7:00 PM"];
+
+  // live caches, kept in sync with Firestore via onSnapshot listeners
+  var slotTimesCache = DEFAULT_SLOT_TIMES.slice();
+  var bookingsCache = [];
+  var blockedCache = [];
+  var listenersStarted = false;
+
+  // ---- gate (PIN) ----
+  var ADMIN_PIN = "Rohit123";
+  var gate = document.getElementById('gate');
+  var app = document.getElementById('app');
+
+  document.getElementById('pinSubmit').addEventListener('click', tryEnter);
+  document.getElementById('pinInput').addEventListener('keydown', function(e){ if(e.key === 'Enter') tryEnter(); });
+
+  function tryEnter(){
+    var val = document.getElementById('pinInput').value;
+    var errEl = document.getElementById('pinError');
+    if(val === ADMIN_PIN){
+      errEl.textContent = '';
+      gate.style.display = 'none';
+      app.style.display = 'block';
+      startListeners();
+    } else {
+      errEl.textContent = 'Incorrect PIN, try again.';
+    }
+  }
+
+  document.getElementById('signOutBtn').addEventListener('click', function(){
+    document.getElementById('pinInput').value = '';
+    gate.style.display = 'flex';
+    app.style.display = 'none';
+  });
+
+  function startListeners(){
+    if(listenersStarted) return;
+    listenersStarted = true;
+
+    if(!db){
+      var msg = '<p class="empty-note">Could not connect to the database. Please refresh the page and check your internet connection or ad blocker.</p>';
+      document.getElementById('timeChipList').innerHTML = msg;
+      document.getElementById('adminSlotGrid').innerHTML = msg;
+      document.getElementById('bookingsTableWrap').innerHTML = msg;
+      return;
+    }
+
+    db.collection('config').doc('slotTimes').onSnapshot(function(doc){
+      if(doc.exists && Array.isArray(doc.data().times) && doc.data().times.length){
+        slotTimesCache = doc.data().times;
+      } else {
+        slotTimesCache = DEFAULT_SLOT_TIMES.slice();
+      }
+      renderTimeChips();
+      renderSlotToggles();
+    }, function(err){ console.error('slotTimes listener error', err); });
+
+    db.collection('blockedSlots').onSnapshot(function(snap){
+      blockedCache = snap.docs.map(function(d){ return Object.assign({ id:d.id }, d.data()); });
+      renderSlotToggles();
+    }, function(err){ console.error('blockedSlots listener error', err); });
+
+    db.collection('bookings').onSnapshot(function(snap){
+      bookingsCache = snap.docs.map(function(d){ return Object.assign({ id:d.id }, d.data()); });
+      renderSlotToggles();
+      renderBookingsTable();
+    }, function(err){ console.error('bookings listener error', err); });
+
+    renderDayRail();
+  }
+
+  // ---- time slot manager ----
+  function saveSlotTimes(times){
+    db.collection('config').doc('slotTimes').set({ times: times }).catch(function(err){
+      console.error('failed to save slot times', err);
+      alert('Could not save that change — check your connection and try again.');
+    });
+  }
+  function renderTimeChips(){
+    var wrap = document.getElementById('timeChipList');
+    wrap.innerHTML = '';
+    slotTimesCache.forEach(function(t){
+      var chip = document.createElement('div');
+      chip.className = 'time-chip';
+      chip.innerHTML = '<span>' + t + '</span>';
+      var rm = document.createElement('button');
+      rm.innerHTML = '&times;';
+      rm.title = 'Remove this time';
+      rm.addEventListener('click', function(){
+        var updated = slotTimesCache.filter(function(x){ return x !== t; });
+        saveSlotTimes(updated);
+      });
+      chip.appendChild(rm);
+      wrap.appendChild(chip);
+    });
+    if(slotTimesCache.length === 0){
+      wrap.innerHTML = '<span class="empty-note">No times configured — add one below.</span>';
+    }
+  }
+  document.getElementById('addTimeBtn').addEventListener('click', function(){
+    var input = document.getElementById('newTimeInput');
+    var val = input.value.trim();
+    if(!val) return;
+    var updated = slotTimesCache.slice();
+    if(updated.indexOf(val) === -1){ updated.push(val); saveSlotTimes(updated); }
+    input.value = '';
+  });
+  document.getElementById('resetTimesBtn').addEventListener('click', function(){
+    saveSlotTimes(DEFAULT_SLOT_TIMES.slice());
+  });
+
+  // ---- day / slot availability ----
+  var adminDays = [];
+  var adminToday = new Date();
+  for(var i=0;i<14;i++){
+    var dd = new Date(adminToday);
+    dd.setDate(adminToday.getDate()+i);
+    adminDays.push(dd);
+  }
+  var adminActiveIdx = 0;
+  function dayISO(d){ return d.toISOString().slice(0,10); }
+  function slotDocId(iso, time){ return iso + '__' + time.replace(/[^a-zA-Z0-9]/g, '-'); }
+
+  function renderDayRail(){
+    var rail = document.getElementById('adminDayRail');
+    rail.innerHTML = '';
+    adminDays.forEach(function(d, idx){
+      var pill = document.createElement('button');
+      pill.type = 'button';
+      pill.className = 'day-pill' + (idx === adminActiveIdx ? ' active' : '');
+      pill.innerHTML = '<span class="dname">' + d.toLocaleDateString(undefined,{weekday:'short'}) + '</span><span class="dnum">' + d.getDate() + '</span>';
+      pill.addEventListener('click', function(){ adminActiveIdx = idx; renderDayRail(); });
+      rail.appendChild(pill);
+    });
+    renderSlotToggles();
+  }
+
+  function renderSlotToggles(){
+    var grid = document.getElementById('adminSlotGrid');
+    grid.innerHTML = '';
+    var d = adminDays[adminActiveIdx];
+    if(!d) return;
+    var iso = dayISO(d);
+
+    slotTimesCache.forEach(function(time){
+      var isTaken = bookingsCache.some(function(b){ return b.dateISO === iso && b.time === time; });
+      var isBlocked = blockedCache.some(function(b){ return b.dateISO === iso && b.time === time; });
+      var el = document.createElement('div');
+      el.className = 'slot-toggle ' + (isTaken ? 'taken-state' : (isBlocked ? 'blocked-state' : 'open-state'));
+      var statusText = isTaken ? 'Booked' : (isBlocked ? 'Closed' : 'Open');
+      el.innerHTML = '<span><span class="time">' + time + '</span><span class="status">' + statusText + '</span></span>';
+      if(!isTaken){
+        var btn = document.createElement('button');
+        btn.textContent = isBlocked ? 'Reopen' : 'Close';
+        btn.addEventListener('click', function(){
+          var docId = slotDocId(iso, time);
+          if(isBlocked){
+            db.collection('blockedSlots').doc(docId).delete().catch(function(err){ console.error(err); });
+          } else {
+            db.collection('blockedSlots').doc(docId).set({ dateISO: iso, time: time }).catch(function(err){ console.error(err); });
+          }
+        });
+        el.appendChild(btn);
+      }
+      grid.appendChild(el);
+    });
+  }
+
+  // ---- bookings table ----
+  function renderBookingsTable(){
+    var wrap = document.getElementById('bookingsTableWrap');
+    var bookings = bookingsCache.slice().sort(function(a,b){ return (a.dateISO + a.time).localeCompare(b.dateISO + b.time); });
+    if(bookings.length === 0){
+      wrap.innerHTML = '<p class="empty-note">No bookings yet.</p>';
+      return;
+    }
+    var rows = bookings.map(function(b){
+      return '<tr>' +
+        '<td>' + b.dateISO + '<br>' + b.time + '</td>' +
+        '<td class="name-cell">' + escapeHtml(b.name || '') + '</td>' +
+        '<td>' + escapeHtml(b.email || '') + (b.phone ? '<br>' + escapeHtml(b.phone) : '') + '</td>' +
+        '<td>' + escapeHtml(b.level || '') + '<br>' + escapeHtml(b.mode || '') + '</td>' +
+        '<td>' + escapeHtml(b.notes || '&mdash;') + '</td>' +
+        '<td><button class="btn btn-danger btn-sm" data-id="' + b.id + '">Cancel</button></td>' +
+      '</tr>';
+    }).join('');
+    wrap.innerHTML = '<table><thead><tr><th>When</th><th>Name</th><th>Contact</th><th>Level / Type</th><th>Notes</th><th></th></tr></thead><tbody>' + rows + '</tbody></table>';
+    wrap.querySelectorAll('button[data-id]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var id = btn.getAttribute('data-id');
+        db.collection('bookings').doc(id).delete().catch(function(err){
+          console.error('cancel failed', err);
+          alert('Could not cancel that booking — check your connection and try again.');
+        });
+      });
+    });
+  }
+  function escapeHtml(s){
+    return String(s).replace(/[&<>"']/g, function(c){
+      return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c];
+    });
+  }
 })();
 </script>
 </body>
